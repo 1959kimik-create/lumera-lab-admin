@@ -3,7 +3,8 @@
 랜딩 페이지 문의(Google Sheets `INQUIRIES`)를 관리하는 관리자 페이지입니다.
 
 - 랜딩: https://lumera-lab-landing.vercel.app
-- 관리자: 별도 Vercel URL (아래 배포 후 확인)
+- 관리자: https://6lumera-lab-admin.vercel.app
+- GitHub: https://github.com/1959kimik-create/lumera-lab-admin
 
 ## 기능
 
