@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>LUMERA LAB Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="loginView" class="view">
+    <div class="panel panel--narrow">
+      <p class="label">LUMERA LAB</p>
+      <h1 class="title">Admin</h1>
+      <p class="subtitle">인바운드 문의 관리</p>
+      <form id="loginForm" class="form">
+        <label for="password">관리자 비밀번호</label>
+        <input type="password" id="password" name="password" required autocomplete="current-password" />
+        <p class="error" id="loginError" hidden></p>
+        <button type="submit" class="btn btn--primary">로그인</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="adminView" class="view" hidden>
+    <header class="header">
+      <div>
+        <p class="label">LUMERA LAB Admin</p>
+        <h1 class="title title--sm">인바운드 문의</h1>
+      </div>
+      <div class="header-actions">
+        <button type="button" class="btn btn--ghost" id="refreshBtn">새로고침</button>
+        <button type="button" class="btn btn--ghost" id="logoutBtn">로그아웃</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="toolbar">
+        <label for="filterStatus">상태 필터</label>
+        <select id="filterStatus">
+          <option value="">전체</option>
+          <option value="NEW">NEW</option>
+          <option value="IN_PROGRESS">IN_PROGRESS</option>
+          <option value="DONE">DONE</option>
+          <option value="CLOSED">CLOSED</option>
+        </select>
+        <p class="count" id="inquiryCount">0건</p>
+      </div>
+
+      <p class="empty" id="emptyState" hidden>등록된 문의가 없습니다.</p>
+      <div class="inquiry-list" id="inquiryList"></div>
+    </main>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
